@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMD vs NVIDIA AI Stack Competitive Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="container">
+                <h1>AMD vs NVIDIA AI Stack Competitive Analysis</h1>
+                <p class="executive-summary">Strategic Intelligence Brief • $500B+ TAM Opportunity • Chief of Staff Analysis</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- Executive Summary Cards -->
+            <div class="summary-cards">
+                <div class="summary-card amd-card">
+                    <h3>AMD Position</h3>
+                    <div class="metric">10-15% Target Share</div>
+                    <div class="metric-label">$50-90B Revenue Opportunity</div>
+                </div>
+                <div class="summary-card neutral-card">
+                    <h3>Market TAM 2028</h3>
+                    <div class="metric">$500B+</div>
+                    <div class="metric-label">80% Inference Growth</div>
+                </div>
+                <div class="summary-card nvidia-card">
+                    <h3>NVIDIA Dominance</h3>
+                    <div class="metric">80-95%</div>
+                    <div class="metric-label">Current Market Share</div>
+                </div>
+            </div>
+
+            <!-- Section 1: Hardware Comparison -->
+            <section class="section" id="hardware">
+                <div class="section-header">
+                    <h2>1. Hardware Comparison</h2>
+                    <p>AMD Instinct MI355X vs NVIDIA B200/GB200</p>
+                </div>
+                
+                <div class="hardware-grid">
+                    <div class="hardware-comparison">
+                        <div class="comparison-table">
+                            <div class="comparison-header">
+                                <div class="spec-label">Specification</div>
+                                <div class="amd-header">AMD MI355X</div>
+                                <div class="nvidia-header">NVIDIA B200</div>
+                                <div class="advantage-header">Advantage</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="spec-label">Memory</div>
+                                <div class="amd-value">288GB HBM3E</div>
+                                <div class="nvidia-value">192GB HBM3</div>
+                                <div class="advantage amd-advantage">AMD +50%</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="spec-label">Bandwidth</div>
+                                <div class="amd-value">8TB/s</div>
+                                <div class="nvidia-value">5TB/s</div>
+                                <div class="advantage amd-advantage">AMD +60%</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="spec-label">Power</div>
+                                <div class="amd-value">1400W</div>
+                                <div class="nvidia-value">TBD</div>
+                                <div class="advantage neutral">TBD</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="spec-label">Architecture</div>
+                                <div class="amd-value">Single-GPU</div>
+                                <div class="nvidia-value">8-GPU Required</div>
+                                <div class="advantage amd-advantage">AMD Simpler</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="performance-charts">
+                        <div class="chart-container">
+                            <h4>Llama 3.1 405B Inference Performance</h4>
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <h4>Cost per Token Comparison</h4>
+                            <canvas id="costChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="architecture-callout">
+                    <h4>🎯 Key Advantage: AMD Single-GPU Execution</h4>
+                    <p>AMD MI355X can run large models like Llama 3.1 405B on a single GPU, while NVIDIA requires 8-GPU tensor parallelism, reducing complexity and cost.</p>
+                </div>
+            </section>
+
+            <!-- Section 2: Software Stack Analysis -->
+            <section class="section" id="software">
+                <div class="section-header">
+                    <h2>2. Software Stack Analysis</h2>
+                    <p>ROCm 7.0 vs CUDA Ecosystem</p>
+                </div>
+                
+                <div class="software-grid">
+                    <div class="software-comparison">
+                        <div class="rocm-improvements">
+                            <h4>ROCm 7.0 Performance Gains</h4>
+                            <div class="improvement-bars">
+                                <div class="improvement-bar">
+                                    <span>Inference Performance</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 87.5%">3.5x improvement</div>
+                                    </div>
+                                </div>
+                                <div class="improvement-bar">
+                                    <span>Training Performance</span>
+                                    <div class="bar">
+                                        <div class="fill" style="width: 75%">3x improvement</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-support">
+                            <h4>Framework Compatibility</h4>
+                            <div class="framework-grid">
+                                <div class="framework-item supported">✓ PyTorch</div>
+                                <div class="framework-item supported">✓ TensorFlow</div>
+                                <div class="framework-item supported">✓ JAX</div>
+                                <div class="framework-item supported">✓ ONNX</div>
+                                <div class="framework-item supported">✓ FP4/FP6/FP8</div>
+                                <div class="framework-item partial">⚠ Custom Kernels</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ecosystem-charts">
+                        <div class="chart-container">
+                            <h4>Developer Ecosystem Market Share</h4>
+                            <canvas id="ecosystemChart"></canvas>
+                        </div>
+                        <div class="migration-complexity">
+                            <h4>CUDA to ROCm Migration</h4>
+                            <div class="migration-visual">
+                                <div class="migration-segment automated">
+                                    <span>80% Automated</span>
+                                </div>
+                                <div class="migration-segment manual">
+                                    <span>20% Manual</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Services & Ecosystem -->
+            <section class="section" id="services">
+                <div class="section-header">
+                    <h2>3. Services & Ecosystem Opportunities</h2>
+                    <p>Partnerships, Acquisitions, and Strategic Positioning</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="partnerships">
+                        <h4>Key Partnerships</h4>
+                        <div class="partner-list">
+                            <div class="partner-item">
+                                <div class="partner-name">Microsoft Azure</div>
+                                <div class="partner-status">Active Deployment</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-name">Oracle Cloud</div>
+                                <div class="partner-status">MI300X Systems</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-name">Meta</div>
+                                <div class="partner-status">AI Infrastructure</div>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-name">AWS</div>
+                                <div class="partner-status">Growing Adoption</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="acquisitions">
+                        <h4>Strategic Acquisitions Timeline</h4>
+                        <div class="acquisition-timeline">
+                            <div class="acquisition-item">
+                                <div class="year">2024</div>
+                                <div class="acquisition-details">
+                                    <strong>Nod.ai</strong> - AI Software Stack
+                                </div>
+                            </div>
+                            <div class="acquisition-item">
+                                <div class="year">2024</div>
+                                <div class="acquisition-details">
+                                    <strong>Silo AI</strong> - AI Consulting & Services
+                                </div>
+                            </div>
+                            <div class="acquisition-item">
+                                <div class="year">2024</div>
+                                <div class="acquisition-details">
+                                    <strong>ZT Systems</strong> - $4.9B Hardware Integration
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="positioning-matrix">
+                    <h4>Strategic Positioning Matrix</h4>
+                    <div class="matrix-grid">
+                        <div class="matrix-item amd-strength">
+                            <h5>AMD Advantages</h5>
+                            <ul>
+                                <li>30-40% cost advantage</li>
+                                <li>Superior memory capacity</li>
+                                <li>Open-source ecosystem</li>
+                                <li>Single-GPU architecture</li>
+                            </ul>
+                        </div>
+                        <div class="matrix-item nvidia-strength">
+                            <h5>NVIDIA Strengths</h5>
+                            <ul>
+                                <li>90% developer mindshare</li>
+                                <li>15+ years ecosystem maturity</li>
+                                <li>Comprehensive software stack</li>
+                                <li>Performance benchmarks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Market TAM Analysis -->
+            <section class="section" id="market">
+                <div class="section-header">
+                    <h2>4. Market TAM Analysis</h2>
+                    <p>Lisa Su's $500B+ Vision and AMD's Growth Opportunity</p>
+                </div>
+                
+                <div class="market-grid">
+                    <div class="tam-chart-container">
+                        <div class="chart-container large-chart">
+                            <h4>GPU TAM Growth to 2028 (Lisa Su's Projection)</h4>
+                            <canvas id="tamChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="market-share-analysis">
+                        <div class="chart-container">
+                            <h4>Current Market Share 2024</h4>
+                            <canvas id="currentShareChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <h4>Projected Share 2027-2028</h4>
+                            <canvas id="projectedShareChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="opportunity-analysis">
+                    <div class="opportunity-cards">
+                        <div class="opportunity-card">
+                            <h4>Revenue Opportunity</h4>
+                            <div class="big-number">$50-90B</div>
+                            <p>10-15% market share target</p>
+                        </div>
+                        <div class="opportunity-card">
+                            <h4>Growth Driver</h4>
+                            <div class="big-number">80%</div>
+                            <p>Annual inference growth</p>
+                        </div>
+                        <div class="opportunity-card">
+                            <h4>Workload Focus</h4>
+                            <div class="big-number">60%</div>
+                            <p>Inference vs 40% training</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Implications -->
+            <section class="section strategic-implications">
+                <div class="section-header">
+                    <h2>Strategic Implications</h2>
+                </div>
+                <div class="implications-grid">
+                    <div class="implication-item">
+                        <h4>🎯 Immediate Opportunities</h4>
+                        <ul>
+                            <li>Target memory-intensive inference workloads</li>
+                            <li>Leverage cost advantage for enterprise adoption</li>
+                            <li>Accelerate ROCm ecosystem development</li>
+                        </ul>
+                    </div>
+                    <div class="implication-item">
+                        <h4>🔥 Critical Challenges</h4>
+                        <ul>
+                            <li>Close developer ecosystem gap</li>
+                            <li>Improve CUDA migration tools</li>
+                            <li>Build comprehensive software stack</li>
+                        </ul>
+                    </div>
+                    <div class="implication-item">
+                        <h4>📈 Long-term Vision</h4>
+                        <ul>
+                            <li>Capture 10-15% market share by 2028</li>
+                            <li>Position as the open-source alternative</li>
+                            <li>Lead in inference optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <div class="container">
+                <p>AMD Chief of Staff Strategic Analysis • Confidential • August 2025</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
